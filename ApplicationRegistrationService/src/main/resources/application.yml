@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: ApplicationRegistrationService
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///ISH-DB
+    username: root
+    password: test
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+server:
+  port: 7071
+  ar:
+    ssa-web:
+      url: http://localhost:9090/ssa-web-api/find/{ssn}
+      state: california
